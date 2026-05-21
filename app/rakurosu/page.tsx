@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import "./rakurosu.css";
 import { FaqItem } from "./FaqItem";
 import { CampaignSection } from "./sections/CampaignSection";
 import { GuideAccordionItem } from "./sections/GuideAccordionItem";
@@ -18,7 +19,7 @@ const SECTION_BG = "#f2f5f7";
 // ── App Screenshots ───────────────────────────────────────
 function AppScreenshots() {
   return (
-    <div style={{ flexShrink: 0, display: "flex", alignItems: "flex-start", position: "relative" }}>
+    <div className="rk-screenshots" style={{ flexShrink: 0, display: "flex", alignItems: "flex-start", position: "relative" }}>
       <div style={{
         borderRadius: 32,
         overflow: "hidden",
@@ -159,22 +160,21 @@ export default function LpPage() {
 
         {/* ── Header ── */}
         <header style={{ position: "sticky", top: 0, zIndex: 100, background: "#fff", borderBottom: "1px solid #e8ecef" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", height: 72, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <Link href="/rakurosu" style={{ textDecoration: "none" }}>
-              <h1 style={{
-                fontFamily: "'851GKKTT', sans-serif",
-                background: "#38BDF8",
+          <div className="rk-container" style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", height: 72, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <Link href="/rakurosu" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{
+                background: PRIMARY,
                 color: "#fff",
-                padding: "8px 20px",
-                borderRadius: "4px",
-                letterSpacing: "0.06em",
-                fontSize: "1.5rem",
-                fontWeight: "bold",
+                padding: "6px 14px",
+                borderRadius: 6,
+                fontSize: 13,
+                fontWeight: 800,
+                letterSpacing: "0.04em",
               }}>
                 ラクロス
-              </h1>
+              </span>
             </Link>
-            <nav style={{ display: "flex", alignItems: "center", gap: 32 }}>
+            <nav className="rk-header-nav" style={{ display: "flex", alignItems: "center", gap: 32 }}>
               {[
                 { label: "ラクロスについて", href: "#about" },
                 { label: "使い方", href: "#howto" },
@@ -211,8 +211,8 @@ export default function LpPage() {
             </p>
           </div>
           {/* Hero 本体 */}
-          <div style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 60px", display: "flex", alignItems: "center", gap: 40, minHeight: 520 }}>
-            <div style={{ flex: 1 }}>
+          <div className="rk-container rk-hero-grid" style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 24px 60px", display: "flex", alignItems: "center", gap: 40, minHeight: 520 }}>
+            <div className="rk-hero-text" style={{ flex: 1 }}>
               <div style={{ marginBottom: 24 }}>
                 <span style={{
                   display: "inline-block",
@@ -228,18 +228,19 @@ export default function LpPage() {
                   クロス施工の採寸計算アプリ
                 </span>
               </div>
-              <h2 style={{ fontSize: 52, fontWeight: 900, lineHeight: 1.2, marginBottom: 24, color: "#111" }}>
+              <h2 className="rk-hero-title" style={{ fontSize: 52, fontWeight: 900, lineHeight: 1.2, marginBottom: 24, color: "#111" }}>
                 メモを撮るだけ。<br />
                 <span style={{ color: PRIMARY }}>計算も送信も</span>、<br />
                 ぜんぶラクに。
               </h2>
-              <p style={{ fontSize: 16, color: "#555", lineHeight: 1.9, marginBottom: 36, maxWidth: 460 }}>
+              <p className="rk-hero-sub" style={{ fontSize: 16, color: "#555", lineHeight: 1.9, marginBottom: 36, maxWidth: 460 }}>
                 手書きの採寸メモを写真に撮るだけで、部屋ごとの必要数量と実工事面積を自動計算。
                 計算結果はそのまま LINE やメールで業者へ送信できます。
               </p>
-              <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+              <div className="rk-hero-cta" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <Link
                   href="https://rakurosu.vercel.app/login"
+                  className="rk-hero-cta-btn"
                   style={{
                     background: PRIMARY,
                     color: "#fff",
@@ -249,12 +250,14 @@ export default function LpPage() {
                     fontSize: 16,
                     fontWeight: 700,
                     display: "inline-block",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   無料で始める →
                 </Link>
                 <a
                   href="#howto"
+                  className="rk-hero-cta-btn"
                   style={{
                     border: `2px solid ${PRIMARY}`,
                     color: PRIMARY,
@@ -264,6 +267,7 @@ export default function LpPage() {
                     fontSize: 16,
                     fontWeight: 700,
                     display: "inline-block",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   使い方を見る
@@ -279,12 +283,12 @@ export default function LpPage() {
 
         {/* ── About ── */}
         <section id="about" style={{ background: SECTION_BG, padding: "80px 24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div style={{ marginBottom: 52 }}>
-              <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>ラクロスについて</p>
-              <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>ABOUT ラクロス</h2>
+              <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>ラクロスについて</p>
+              <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>ABOUT ラクロス</h2>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+            <div className="rk-features-grid rk-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
               {FEATURES.map(({ icon, title, desc }) => (
                 <div key={title} style={{ background: "#fff", borderRadius: 16, padding: "32px 28px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
                   <div style={{ fontSize: 40, marginBottom: 16 }}>{icon}</div>
@@ -298,14 +302,15 @@ export default function LpPage() {
 
         {/* ── HOW TO USE ── */}
         <section id="howto" style={{ padding: "80px 24px", background: "#fff" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 56 }}>
-              <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>ラクロスの使い方</p>
-              <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>HOW TO USE</h2>
+              <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>ラクロスの使い方</p>
+              <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>HOW TO USE</h2>
             </div>
             {STEPS.map(({ step, title, desc, emoji }, i) => (
               <div
                 key={step}
+                className="rk-step-item"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -315,7 +320,7 @@ export default function LpPage() {
                   padding: "0 20px",
                 }}
               >
-                <div style={{ flexShrink: 0, textAlign: "center" }}>
+                <div className="rk-step-icon" style={{ flexShrink: 0, textAlign: "center" }}>
                   <div style={{
                     width: 160,
                     height: 160,
@@ -355,10 +360,10 @@ export default function LpPage() {
 
         {/* ── 開発者の思い ── */}
         <section style={{ background: SECTION_BG, padding: "80px 24px" }}>
-          <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 800, margin: "0 auto" }}>
             <div style={{ marginBottom: 48 }}>
-              <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>開発者の思い</p>
-              <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>現場管理の<br />"あの手間"をなくしたい</h2>
+              <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>開発者の思い</p>
+              <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>現場管理の<br />"あの手間"をなくしたい</h2>
             </div>
             <div style={{ position: "relative", marginBottom: 48 }}>
               <div style={{ position: "absolute", top: -16, left: 0, fontSize: 80, color: PRIMARY, opacity: 0.15, lineHeight: 1, fontFamily: "serif" }}>"</div>
@@ -395,10 +400,10 @@ export default function LpPage() {
 
         {/* ── B-2: 採寸メモの書き方ガイド（アコーディオン化） ── */}
         <section style={{ background: "#fff", padding: "80px 24px" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 40 }}>
-              <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>採寸メモの書き方ガイド</p>
-              <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>メモのコツ</h2>
+              <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>採寸メモの書き方ガイド</p>
+              <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>メモのコツ</h2>
               <p style={{ fontSize: 15, color: "#555", marginTop: 12, lineHeight: 1.8 }}>
                 書き方のルールに沿って書けば、認識精度はぐっと上がります。
               </p>
@@ -430,7 +435,7 @@ export default function LpPage() {
               <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, marginBottom: 20 }}>
                 同じ列に複数の部屋を書く場合、必ず以下の4つのどれかで区切ってください。
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+              <div className="rk-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
                 {[
                   { num: "①", title: "□で囲んだ部屋名", desc: "新しい部屋名を□で囲むと新しい部屋に（最もおすすめ）" },
                   { num: "②", title: "手書きの横線", desc: "はっきりした横線（──）を引くと区切りになる" },
@@ -456,7 +461,7 @@ export default function LpPage() {
               <p style={{ fontSize: 15, color: "#444", lineHeight: 1.8, marginBottom: 20 }}>
                 メインクロス以外の種別（天井・AC・CL・KT天井 など）を指定したい場合は、寸法を <strong>□(四角)で囲んで、その左横にラベル</strong>を書いてください。
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+              <div className="rk-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                 {[
                   { label: "AC", dim: "212×2", result: '212×2 が sub_type:"AC"' },
                   { label: "天井", dim: "135×2", result: '135×2 が sub_type:"天井"' },
@@ -478,7 +483,7 @@ export default function LpPage() {
               <div style={{ background: "#fff8e1", border: "1.5px solid #ffa000", borderRadius: 10, padding: "14px 18px", marginBottom: 20, fontSize: 14, color: "#5d4037", lineHeight: 1.8 }}>
                 <strong>⚠️ 最も多い間違い：</strong> □で複数の寸法行を縦に囲った場合、<strong>1つの矩形枠で全部を囲ってください。</strong> 枠を行ごとに分けると、最上段の行だけがラベルの種別になり、下の行が「メイン」になってしまいます。
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
+              <div className="rk-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
                 <div style={{ background: "#e8f5e9", border: "1.5px solid #66bb6a", borderRadius: 12, padding: "20px 24px" }}>
                   <div style={{ fontSize: 12, fontWeight: 700, color: "#2e7d32", marginBottom: 16 }}>OK　1つの枠で囲む</div>
                   <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
@@ -507,7 +512,7 @@ export default function LpPage() {
                 <p style={{ fontSize: 14, color: "#555", marginBottom: 16, lineHeight: 1.8 }}>
                   「天#」のような略記でも自動で「天井」として認識されます。「KT天井」「ロフト」「ハリ」「洋室バル」などの複合ラベルもそのまま使えます。
                 </p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+                <div className="rk-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                   <div style={{ background: "#e8f5e9", border: "1.5px solid #66bb6a", borderRadius: 12, padding: "20px 24px" }}>
                     <div style={{ fontSize: 12, fontWeight: 700, color: "#2e7d32", marginBottom: 16 }}>OK　複合ラベル（複数行）</div>
                     <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 12 }}>
@@ -561,7 +566,7 @@ export default function LpPage() {
 
             {/* ⑥ 撮影のコツ */}
             <GuideAccordionItem num={6} title="撮影のコツ">
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
+              <div className="rk-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16 }}>
                 {[
                   { icon: "☀️", title: "明るい場所で撮る", desc: "自然光のある場所、またはLEDライトの真下が理想" },
                   { icon: "📋", title: "用紙を平らにする", desc: "クリップボード推奨。ノートが反っていると精度が下がる" },
@@ -590,10 +595,10 @@ export default function LpPage() {
 
         {/* ── FAQ ── */}
         <section id="faq" style={{ background: SECTION_BG, padding: "80px 24px" }}>
-          <div style={{ maxWidth: 760, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 760, margin: "0 auto" }}>
             <div style={{ marginBottom: 48 }}>
-              <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>よくある質問</p>
-              <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>FAQ</h2>
+              <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>よくある質問</p>
+              <h2 className="rk-faq-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>FAQ</h2>
             </div>
             <div style={{ borderTop: "1px solid #dde1e4" }}>
               {FAQS.map(({ q, a }) => (
@@ -613,9 +618,9 @@ export default function LpPage() {
 
         {/* ── CTA ── */}
         <section style={{ background: "#fff", padding: "80px 24px", textAlign: "center" }}>
-          <div style={{ maxWidth: 640, margin: "0 auto" }}>
+          <div className="rk-container" style={{ maxWidth: 640, margin: "0 auto" }}>
             <p style={{ fontSize: 14, color: "#888", fontWeight: 600, marginBottom: 10 }}>さっそくラクロスをはじめよう！</p>
-            <h2 style={{ fontSize: 36, fontWeight: 900, color: "#111", marginBottom: 16 }}>
+            <h2 className="rk-cta-title" style={{ fontSize: 36, fontWeight: 900, color: "#111", marginBottom: 16 }}>
               無料で試してみる
             </h2>
             <p style={{ fontSize: 15, color: "#666", marginBottom: 36, lineHeight: 1.8 }}>
@@ -642,7 +647,7 @@ export default function LpPage() {
 
         {/* ── Footer ── */}
         <footer style={{ background: "#1a1a2e", padding: "32px 24px", color: "#aaa", fontSize: 13 }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
+          <div className="rk-container rk-footer-row" style={{ maxWidth: 1100, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
             <span style={{ color: "#fff", fontWeight: 700, fontSize: 18, letterSpacing: "0.05em" }}>ラクロス</span>
             <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
               <Link href="https://rakurosu.vercel.app/terms" style={{ color: "#aaa", textDecoration: "none" }}>利用規約</Link>

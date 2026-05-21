@@ -78,12 +78,12 @@ export function PricingSection() {
     <section id="pricing" style={{ background: SECTION_BG, padding: "80px 24px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ marginBottom: 16 }}>
-          <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>料金プラン</p>
-          <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>PRICING</h2>
+          <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>料金プラン</p>
+          <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>PRICING</h2>
         </div>
         <p style={{ fontSize: 15, color: "#555", marginBottom: 48 }}>無料トライアルから始められます。クレジットカード不要。</p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "start" }}>
+        <div className="rk-grid-4col" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, alignItems: "start" }}>
           {PLANS.map((plan) => (
             <div
               key={plan.key}

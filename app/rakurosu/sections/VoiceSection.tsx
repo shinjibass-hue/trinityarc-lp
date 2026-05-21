@@ -34,11 +34,11 @@ export function VoiceSection() {
     <section style={{ background: "#fff", padding: "80px 24px" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div style={{ marginBottom: 52 }}>
-          <p style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>お客様の声</p>
-          <h2 style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>VOICE</h2>
+          <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>お客様の声</p>
+          <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>VOICE</h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+        <div className="rk-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
           {VOICES.map(({ name, age, role, initials, comment }) => (
             <div
               key={name}

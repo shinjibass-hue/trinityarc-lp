@@ -1,0 +1,109 @@
+/* Rakurosu LP – responsive overrides */
+
+@media (max-width: 768px) {
+  /* containers */
+  .rk-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* hero */
+  .rk-hero-grid {
+    flex-direction: column !important;
+    gap: 32px !important;
+    text-align: center;
+    align-items: center !important;
+    min-height: unset !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .rk-hero-text {
+    width: 100%;
+    flex: unset !important;
+  }
+  .rk-hero-title {
+    font-size: 36px !important;
+    line-height: 1.25 !important;
+  }
+  .rk-hero-sub {
+    font-size: 15px !important;
+    max-width: 100% !important;
+  }
+  .rk-hero-cta {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .rk-hero-cta a,
+  .rk-hero-cta-btn {
+    width: 100% !important;
+    max-width: 320px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  }
+  /* hide screenshots on mobile to avoid overflow */
+  .rk-screenshots {
+    display: none !important;
+  }
+
+  /* section headings */
+  .rk-section-title {
+    font-size: 28px !important;
+  }
+  .rk-section-subtitle {
+    font-size: 12px !important;
+  }
+
+  /* grids */
+  .rk-features-grid,
+  .rk-steps-grid,
+  .rk-grid-2col,
+  .rk-grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+  .rk-grid-4col {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* campaign */
+  .rk-campaign-price {
+    font-size: 36px !important;
+  }
+  .rk-campaign-strike {
+    display: block !important;
+    margin-right: 0 !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* header nav hidden */
+  .rk-header-nav {
+    display: none !important;
+  }
+
+  /* footer */
+  .rk-footer-row {
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: center !important;
+  }
+
+  /* faq / cta */
+  .rk-faq-title {
+    font-size: 28px !important;
+  }
+  .rk-cta-title {
+    font-size: 28px !important;
+  }
+
+  /* how-to steps */
+  .rk-step-item {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 0 !important;
+  }
+  .rk-step-icon {
+    margin: 0 auto !important;
+  }
+}

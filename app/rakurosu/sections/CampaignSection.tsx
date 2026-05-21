@@ -16,15 +16,15 @@ export function CampaignSection() {
   return (
     <section style={{ background: "#eff9ff", borderTop: "2px solid #bae6fd", borderBottom: "2px solid #bae6fd", padding: "64px 24px" }}>
       <div style={{ maxWidth: 860, margin: "0 auto", textAlign: "center" }}>
-        <p style={{ fontSize: 13, color: "#0369a1", fontWeight: 700, marginBottom: 10, letterSpacing: "0.08em" }}>
+        <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#0369a1", fontWeight: 700, marginBottom: 10, letterSpacing: "0.08em" }}>
           期間限定キャンペーン
         </p>
-        <h2 style={{ fontSize: 40, fontWeight: 900, color: "#0c4a6e", marginBottom: 12, lineHeight: 1.3 }}>
+        <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#0c4a6e", marginBottom: 12, lineHeight: 1.3 }}>
           CAMPAIGN
         </h2>
         <div style={{ marginBottom: 20 }}>
-          <span style={{ fontSize: 18, color: "#555", textDecoration: "line-through", marginRight: 8 }}>通常 ¥1,980/月</span>
-          <span style={{ fontSize: 48, fontWeight: 900, color: PRIMARY, letterSpacing: "-0.02em" }}>¥980</span>
+          <span className="rk-campaign-strike" style={{ fontSize: 18, color: "#555", textDecoration: "line-through", marginRight: 8 }}>通常 ¥1,980/月</span>
+          <span className="rk-campaign-price" style={{ fontSize: 48, fontWeight: 900, color: PRIMARY, letterSpacing: "-0.02em" }}>¥980</span>
           <span style={{ fontSize: 18, color: "#555" }}>/月</span>
         </div>
         <p style={{ fontSize: 15, color: "#0369a1", marginBottom: 8, fontWeight: 600 }}>
