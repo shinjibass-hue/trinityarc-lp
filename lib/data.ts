@@ -22,7 +22,7 @@ export const services: Service[] = [
     color: "#0EA5E9",
     description: "内装積算・見積支援SaaS",
     catch: "クロス工事の見積を、現場経験のロジックで自動化",
-    url: "https://rakurosu.vercel.app/",
+    url: "/rakurosu",
   },
   {
     name: "キドリン",
