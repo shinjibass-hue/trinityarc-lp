@@ -1,5 +1,55 @@
 /* Rakurosu LP – responsive overrides */
 
+.rakurosu-step-flow {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 0 16px;
+}
+.rakurosu-step-card {
+  flex: 0 1 240px;
+  text-align: center;
+}
+.rakurosu-step-img-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.rakurosu-step-num {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0EA5E9;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 17px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.4);
+}
+.rakurosu-step-img-wrap img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e2e8f0;
+  display: block;
+}
+.rakurosu-step-caption {
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
 @media (max-width: 768px) {
   /* containers */
   .rk-container {
@@ -116,5 +166,17 @@
   }
   .rk-step-icon {
     margin: 0 auto !important;
+  }
+
+  /* step flow (ABOUT section) */
+  .rakurosu-step-flow {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .rakurosu-step-card {
+    flex: 0 0 auto;
+    max-width: 280px;
+    width: 100%;
   }
 }

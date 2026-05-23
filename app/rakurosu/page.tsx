@@ -289,12 +289,18 @@ export default function LpPage() {
               <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>ラクロスについて</p>
               <h2 className="rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>ABOUT ラクロス</h2>
             </div>
-            <div className="rk-features-grid rk-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
-              {FEATURES.map(({ icon, title, desc }) => (
-                <div key={title} style={{ background: "#fff", borderRadius: 16, padding: "32px 28px", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
-                  <div style={{ fontSize: 40, marginBottom: 16 }}>{icon}</div>
-                  <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 12, color: "#111" }}>{title}</h3>
-                  <p style={{ fontSize: 14, color: "#666", lineHeight: 1.8 }}>{desc}</p>
+            <div className="rakurosu-step-flow">
+              {[
+                { src: "/rakurosu/rakurosu-step1.jpg", caption: "採寸メモを撮るだけで自動入力", num: 1 },
+                { src: "/rakurosu/rakurosu-step2.jpg", caption: "種別ごとに必要数量を自動計算", num: 2 },
+                { src: "/rakurosu/rakurosu-step3.jpg", caption: "LINEやメールで現場から直接発注", num: 3 },
+              ].map((step) => (
+                <div key={step.num} className="rakurosu-step-card">
+                  <div className="rakurosu-step-img-wrap">
+                    <span className="rakurosu-step-num">{step.num}</span>
+                    <img src={step.src} alt={step.caption} />
+                  </div>
+                  <p className="rakurosu-step-caption">{step.caption}</p>
                 </div>
               ))}
             </div>
