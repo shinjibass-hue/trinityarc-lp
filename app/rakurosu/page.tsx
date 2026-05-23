@@ -170,6 +170,7 @@ export default function LpPage() {
                 fontSize: 13,
                 fontWeight: 800,
                 letterSpacing: "0.04em",
+                fontFamily: "'851GKKTT', sans-serif",
               }}>
                 ラクロス
               </span>

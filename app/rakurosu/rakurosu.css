@@ -42,9 +42,20 @@
     white-space: nowrap !important;
     box-sizing: border-box !important;
   }
-  /* hide screenshots on mobile to avoid overflow */
+  /* show screenshots on mobile with vertical stack */
   .rk-screenshots {
-    display: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0 !important;
+    width: 100% !important;
+    position: static !important;
+  }
+  .rk-screenshots > div {
+    width: 100% !important;
+    max-width: 200px !important;
+    margin-left: 0 !important;
+    margin-top: 8px !important;
   }
 
   /* section headings */
