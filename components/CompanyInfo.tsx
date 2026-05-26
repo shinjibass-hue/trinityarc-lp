@@ -10,10 +10,10 @@ export default function CompanyInfo() {
           <p>
             お問い合わせ:{" "}
             <a
-              href="mailto:shinjibass@gmail.com"
+              href="mailto:info@trinityarc.jp"
               className="text-neutral-900 underline underline-offset-4 hover:text-neutral-600 transition-colors"
             >
-              shinjibass@gmail.com
+              info@trinityarc.jp
             </a>
           </p>
         </div>

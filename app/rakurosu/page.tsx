@@ -7,6 +7,7 @@ import { CampaignSection } from "./sections/CampaignSection";
 import { GuideAccordionItem } from "./sections/GuideAccordionItem";
 import { VoiceSection } from "./sections/VoiceSection";
 import { PricingSection } from "./sections/PricingSection";
+import SmallScreenFold from "./SmallScreenFold";
 
 export const metadata: Metadata = {
   title: "ラクロス | クロス施工の採寸計算アプリ",
@@ -283,6 +284,7 @@ export default function LpPage() {
         <CampaignSection />
 
         {/* ── About ── */}
+        <SmallScreenFold title="ラクロスとは">
         <section id="about" style={{ background: SECTION_BG, padding: "80px 24px" }}>
           <div className="rk-container" style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div style={{ marginBottom: 52 }}>
@@ -296,18 +298,20 @@ export default function LpPage() {
                 { src: "/rakurosu/rakurosu-step3.jpg", caption: "LINEやメールで現場から直接発注", num: 3 },
               ].map((step) => (
                 <div key={step.num} className="rakurosu-step-card">
-                  <div className="rakurosu-step-img-wrap">
-                    <span className="rakurosu-step-num">{step.num}</span>
-                    <img src={step.src} alt={step.caption} />
+                  <div className="rakurosu-step-image-wrap">
+                    <img src={step.src} alt={step.caption} className="rakurosu-step-img" />
+                    <div className="rakurosu-step-badge">{step.num}</div>
+                    <div className="rakurosu-step-overlay-title">{step.caption}</div>
                   </div>
-                  <p className="rakurosu-step-caption">{step.caption}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+        </SmallScreenFold>
 
         {/* ── HOW TO USE ── */}
+        <SmallScreenFold title="ご利用の流れ">
         <section id="howto" style={{ padding: "80px 24px", background: "#fff" }}>
           <div className="rk-container" style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 56 }}>
@@ -364,8 +368,10 @@ export default function LpPage() {
             ))}
           </div>
         </section>
+        </SmallScreenFold>
 
         {/* ── 開発者の思い ── */}
+        <SmallScreenFold title="開発者の思い">
         <section style={{ background: SECTION_BG, padding: "80px 24px" }}>
           <div className="rk-container" style={{ maxWidth: 800, margin: "0 auto" }}>
             <div style={{ marginBottom: 48 }}>
@@ -404,8 +410,10 @@ export default function LpPage() {
             </div>
           </div>
         </section>
+        </SmallScreenFold>
 
         {/* ── B-2: 採寸メモの書き方ガイド（アコーディオン化） ── */}
+        <SmallScreenFold title="採寸メモの書き方ガイド">
         <section style={{ background: "#fff", padding: "80px 24px" }}>
           <div className="rk-container" style={{ maxWidth: 900, margin: "0 auto" }}>
             <div style={{ marginBottom: 40 }}>
@@ -593,19 +601,25 @@ export default function LpPage() {
 
           </div>
         </section>
+        </SmallScreenFold>
 
         {/* ── A-2: 利用者の声 ── */}
+        <SmallScreenFold title="ご利用者の声">
         <VoiceSection />
+        </SmallScreenFold>
 
         {/* ── A-3: 料金プラン ── */}
+        <SmallScreenFold title="料金プラン">
         <PricingSection />
+        </SmallScreenFold>
 
         {/* ── FAQ ── */}
+        <SmallScreenFold title="よくあるご質問">
         <section id="faq" style={{ background: SECTION_BG, padding: "80px 24px" }}>
           <div className="rk-container" style={{ maxWidth: 760, margin: "0 auto" }}>
             <div style={{ marginBottom: 48 }}>
               <p className="rk-section-subtitle" style={{ fontSize: 13, color: "#999", fontWeight: 600, marginBottom: 6 }}>よくある質問</p>
-              <h2 className="rk-faq-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>FAQ</h2>
+              <h2 className="rk-faq-title rk-section-title" style={{ fontSize: 40, fontWeight: 900, color: "#111" }}>FAQ</h2>
             </div>
             <div style={{ borderTop: "1px solid #dde1e4" }}>
               {FAQS.map(({ q, a }) => (
@@ -622,6 +636,7 @@ export default function LpPage() {
             </div>
           </div>
         </section>
+        </SmallScreenFold>
 
         {/* ── CTA ── */}
         <section style={{ background: "#fff", padding: "80px 24px", textAlign: "center" }}>

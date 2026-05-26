@@ -7,10 +7,10 @@ export default function Contact() {
           サービス・パートナーシップに関するご相談はこちらまで。
         </p>
         <a
-          href="mailto:shinjibass@gmail.com"
+          href="mailto:info@trinityarc.jp"
           className="inline-block text-xl text-neutral-900 underline underline-offset-4 mt-8 hover:text-neutral-600 transition-colors"
         >
-          shinjibass@gmail.com
+          info@trinityarc.jp
         </a>
       </div>
     </section>
