@@ -8,6 +8,7 @@ import { GuideAccordionItem } from "./sections/GuideAccordionItem";
 import { VoiceSection } from "./sections/VoiceSection";
 import { PricingSection } from "./sections/PricingSection";
 import SmallScreenFold from "./SmallScreenFold";
+import TrinityArcMark from "./TrinityArcMark";
 
 export const metadata: Metadata = {
   title: "ラクロス | クロス施工の採寸計算アプリ",
@@ -401,10 +402,10 @@ export default function LpPage() {
             </div>
             <div style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 20, paddingTop: 32, borderTop: "1px solid #dde1e4" }}>
               <div style={{ width: 56, height: 56, borderRadius: "50%", background: PRIMARY, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0 }}>
-                🏠
+                <TrinityArcMark size={36} />
               </div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: 16, color: "#111" }}>株式会社札建</div>
+                <div style={{ fontWeight: 700, fontSize: 16, color: "#111" }}>Trinity Arc合同会社</div>
                 <div style={{ fontSize: 14, color: "#888", marginTop: 2 }}>ラクロス 開発チーム</div>
               </div>
             </div>
