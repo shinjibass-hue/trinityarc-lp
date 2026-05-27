@@ -401,7 +401,7 @@ export default function LpPage() {
               <p>難しい操作は要りません。現場を知っている人間が作ったから、現場のリズムに合った使い心地になっています。</p>
             </div>
             <div style={{ marginTop: 48, display: "flex", alignItems: "center", gap: 20, paddingTop: 32, borderTop: "1px solid #dde1e4" }}>
-              <div style={{ width: 56, height: 56, borderRadius: "50%", background: PRIMARY, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0 }}>
+              <div style={{ width: 56, height: 56, borderRadius: "50%", background: "#fff", border: "1px solid #dde1e4", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                 <TrinityArcMark size={36} />
               </div>
               <div>
